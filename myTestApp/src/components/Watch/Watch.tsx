@@ -6,7 +6,7 @@ interface WatchState {
 }
 
 class Watch extends React.Component<object, WatchState> {
-  private timerID?: NodeJS.Timeout
+  private timerID?: ReturnType<typeof setTimeout>
 
   constructor(props: object) {
     super(props)
