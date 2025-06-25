@@ -14,7 +14,8 @@ export const fetchReviews = createAsyncThunk<{
   en: Review[]
 }>("reviews/fetchReviews", async (_, { rejectWithValue }) => {
   try {
-    const response = await fetch("../../data.json")
+    // const response = await fetch("../../data.json")
+       const response = await fetch("https://your-site.vercel.app/data.json")
     if (!response.ok) {
       throw new Error("Server error!")
     }
